@@ -1,27 +1,62 @@
-# Team Project Starter
+# EDA Portfolio
 
-A clean starter repository for a 4-person student team. It includes:
-- Issue & PR templates
-- Basic CI workflow
-- CONTRIBUTING guide with branch & commit conventions
-- CODEOWNERS placeholder
-- MIT license
+A 2-week, 2–3 dataset Exploratory Data Analysis (EDA) portfolio.
 
-## 📦 Project Info
-- **Project Name**: _Your Project_
-- **Short Description**: _1–2 lines_
-- **Tech Stack**: _e.g., Python, Node.js, React, PostgreSQL_
+## 📊 Datasets (choose 2–3)
+- Airbnb NYC — rental prices, location trends
+- Netflix Movies & TV Shows — genres, years, ratings
+- Ride-hailing trips (e.g., NYC TLC trips as proxy for Uber/Lyft) — demand vs time of day
 
-## 🚀 Getting Started
-1. Clone the repo
-2. Create a feature branch: `git checkout -b feat/short-description`
-3. Make changes and commit using Conventional Commits (see CONTRIBUTING.md)
-4. Open a Pull Request to `main`
+> Replace or add datasets as you like.
 
-## 📚 Docs
-- See `docs/ARCHITECTURE.md` for high-level design notes.
-- See `CONTRIBUTING.md` for workflow & conventions.
+## 🧰 Tools
+Python • Jupyter • NumPy • Pandas • Matplotlib • Seaborn • Plotly
+
+## 📅 Plan (Sept 1–14, 2025)
+- Week 1: loading, cleaning, basic EDA
+- Week 2: advanced viz, insights, polish + README
+
+## ✅ Deliverables
+- 1 notebook per dataset in `notebooks/`
+- Cleaned data (optional) in `data/processed/`
+- Plots saved to `reports/figures/`
+- README updated with dataset links, approach, and key insights
+
+## 🔧 How to run
+```bash
+# (Option A) Using venv
+python -m venv .venv
+./.venv/Scripts/activate  # Windows
+pip install -r requirements.txt
+jupyter notebook
+
+# (Option B) Using conda
+conda env create -f environment.yml
+conda activate eda-portfolio
+jupyter notebook
+```
+
+## 🗂️ Repo Structure
+```
+eda-portfolio/
+├─ data/
+│  ├─ raw/          # put original CSV/JSON here (unmodified)
+│  ├─ interim/      # intermediate outputs
+│  └─ processed/    # cleaned datasets saved here
+├─ notebooks/
+│  ├─ 01_airbnb_nyc.ipynb
+│  ├─ 02_netflix_titles.ipynb
+│  └─ 03_trips_timeseries.ipynb
+├─ reports/
+│  └─ figures/      # charts exported from notebooks
+├─ src/
+│  ├─ __init__.py
+│  └─ utils.py      # helpers for loading/cleaning/plot style
+├─ requirements.txt
+├─ environment.yml
+└─ README.md
+```
 
 ---
 
-_Starter recreated on 2025-08-28._
+*Generated on 2025-08-28.*
